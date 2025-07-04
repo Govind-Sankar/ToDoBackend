@@ -8,6 +8,10 @@ const bcrypt = require("bcryptjs");
 const PORT = process.env.PORT || 8080;
 const MONGOURL = process.env.MONGOURL;
 
+app.get("/", (req, res) => {
+  res.send("Server is up and running!");
+});
+
 app.use(
   cors({
     origin: "*",
